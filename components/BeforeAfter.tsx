@@ -7,7 +7,7 @@ export function BeforeAfter() {
       <div className="section-shell">
         <p className="eyebrow">Hình ảnh thực tế</p>
         <h2 className="section-title">Trước và sau khi giặt</h2>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="stagger-list mt-8 grid gap-4 md:grid-cols-3">
           {siteConfig.beforeAfter.map((item) => (
             <div key={item} className="surface-card lift-card overflow-hidden">
               <div className="flex aspect-[4/3] items-center justify-center bg-[linear-gradient(135deg,#e6f4ff_0%,#ffffff_58%,#fff7ed_100%)]">

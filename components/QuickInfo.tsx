@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/siteConfig";
 export function QuickInfo() {
   return (
     <section className="relative -mt-5 bg-transparent pb-8">
-      <div className="section-shell grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="section-shell stagger-list grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {siteConfig.quickBenefits.map((item) => {
           const Icon = item.icon;
           return (

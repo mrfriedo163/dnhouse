@@ -12,7 +12,7 @@ export function CTAButtons({ compact = false }: CTAButtonsProps) {
 
   return (
     <div className={compact ? "grid grid-cols-3 gap-2" : "flex flex-col gap-3 sm:flex-row"}>
-      <a className={`${base} ${size} bg-navy text-white shadow-[0_18px_38px_rgba(16,42,67,0.22)]`} href={siteConfig.phoneHref}>
+      <a className={`${base} ${size} cta-pulse bg-navy text-white shadow-[0_18px_38px_rgba(16,42,67,0.22)]`} href={siteConfig.phoneHref}>
         <Phone className="h-5 w-5" aria-hidden />
         Gọi ngay
       </a>

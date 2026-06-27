@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/siteConfig";
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-white/70 bg-white/85 shadow-[0_8px_30px_rgba(16,42,67,0.06)] backdrop-blur-xl">
+    <header className="animate-fade sticky top-0 z-40 border-b border-white/70 bg-white/85 shadow-[0_8px_30px_rgba(16,42,67,0.06)] backdrop-blur-xl">
       <div className="section-shell flex items-center justify-between gap-4 py-3">
         <a href="#" className="flex min-w-0 items-center gap-3" aria-label="DN House">
           <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-navy text-sm font-black text-white shadow-soft">

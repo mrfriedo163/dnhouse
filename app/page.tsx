@@ -38,15 +38,33 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <QuickInfo />
-        <Services />
-        <Pricing />
-        <Process />
-        <BookingForm />
-        <BeforeAfter />
-        <WhyChooseUs />
-        <FAQ />
-        <Contact />
+        <div className="scroll-reveal">
+          <QuickInfo />
+        </div>
+        <div className="scroll-reveal">
+          <Services />
+        </div>
+        <div className="scroll-reveal">
+          <Pricing />
+        </div>
+        <div className="scroll-reveal">
+          <Process />
+        </div>
+        <div className="scroll-reveal">
+          <BookingForm />
+        </div>
+        <div className="scroll-reveal">
+          <BeforeAfter />
+        </div>
+        <div className="scroll-reveal">
+          <WhyChooseUs />
+        </div>
+        <div className="scroll-reveal">
+          <FAQ />
+        </div>
+        <div className="scroll-reveal">
+          <Contact />
+        </div>
       </main>
       <FloatingCTA />
       <Footer />

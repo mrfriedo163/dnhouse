@@ -6,7 +6,7 @@ export function WhyChooseUs() {
       <div className="section-shell">
         <p className="eyebrow">Điểm tin cậy</p>
         <h2 className="section-title">Vì sao chọn DN House</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="stagger-list mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {siteConfig.whyChooseUs.map((item) => {
             const Icon = item.icon;
             return (

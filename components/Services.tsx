@@ -9,7 +9,7 @@ export function Services() {
           <h2 className="section-title">Những việc DN House có thể hỗ trợ</h2>
           <p className="section-copy">Chọn nhanh dịch vụ bạn cần, sau đó gọi hoặc nhắn Zalo để tiệm tư vấn và báo giá trước khi làm.</p>
         </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="stagger-list mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {siteConfig.services.map((service) => {
             const Icon = service.icon;
             return (

@@ -9,7 +9,7 @@ export function Pricing() {
           <h2 className="section-title">Giá tham khảo dễ xem</h2>
           <p className="section-copy">Các mức dưới đây là placeholder để bạn thay nhanh khi có bảng giá chính thức.</p>
         </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-4">
+        <div className="stagger-list mt-8 grid gap-4 md:grid-cols-4">
           {siteConfig.pricing.map((item) => {
             const Icon = item.icon;
             return (
