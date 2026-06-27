@@ -45,8 +45,17 @@ export function Contact() {
               </span>
               <p className="mt-4 text-xl font-black text-navy">Google Maps</p>
               <p className="mt-2 max-w-sm leading-7 text-slate-700">
-                Thay googleMapsEmbedSrc trong config/siteConfig.ts bằng link iframe Google Maps chính xác.
+                Bấm nút bên dưới để mở vị trí DN House trên Google Maps.
               </p>
+              <a
+                className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-navy px-5 font-black text-white shadow-[0_18px_38px_rgba(16,42,67,0.22)] transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sky-200"
+                href={siteConfig.mapsHref}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <MapPin className="h-5 w-5" aria-hidden />
+                Mở Google Maps
+              </a>
             </div>
           )}
         </div>

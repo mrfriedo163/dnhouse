@@ -19,8 +19,7 @@ export const siteConfig = {
   hotline: "0945 632 853",
   phoneHref: "tel:0945632853",
   zaloHref: "https://zalo.me/0945632853",
-  mapsHref:
-    "https://www.google.com/maps/search/?api=1&query=648%2F24%20Khu%20vuc%20Binh%20Trung%2C%20Long%20Tuyen%2C%20Binh%20Thuy%2C%20Can%20Tho",
+  mapsHref: "https://maps.app.goo.gl/f1u58iDt2dWALKnX8",
   address:
     "648/24 Khu vực Bình Trung, Phường Long Tuyền, Quận Bình Thủy, TP. Cần Thơ",
   hours: "07:00 - 21:00 hằng ngày",
