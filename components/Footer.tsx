@@ -16,7 +16,7 @@ export function Footer() {
             />
           </span>
           <div>
-            <p className="text-xl font-black">{siteConfig.businessName}</p>
+            <p className="text-xl font-extrabold">{siteConfig.businessName}</p>
             <p className="mt-1 text-sky-100">{siteConfig.slogan}</p>
           </div>
         </div>

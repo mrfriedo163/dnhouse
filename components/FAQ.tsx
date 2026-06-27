@@ -9,7 +9,7 @@ export function FAQ() {
         <div className="surface-card mt-8 divide-y divide-slate-100 overflow-hidden">
           {siteConfig.faq.map((item) => (
             <details key={item.question} className="group p-5 open:bg-skySoft/40">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-black text-navy">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-extrabold text-navy">
                 {item.question}
                 <span className="text-xl leading-none text-orange-700 transition group-open:rotate-45">+</span>
               </summary>

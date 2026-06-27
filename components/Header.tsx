@@ -18,7 +18,7 @@ export function Header() {
             />
           </span>
           <span className="min-w-0">
-            <span className="block text-base font-black leading-tight sm:text-lg">{siteConfig.businessName}</span>
+            <span className="block text-base font-extrabold leading-tight sm:text-lg">{siteConfig.businessName}</span>
             <span className="hidden text-[0.9rem] leading-5 text-slate-600 sm:block">Giặt sấy tại Cần Thơ</span>
           </span>
         </a>
@@ -33,7 +33,7 @@ export function Header() {
 
         <a
           href={siteConfig.phoneHref}
-          className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-lg bg-navy px-4 text-[0.95rem] font-bold leading-6 text-white shadow-[0_14px_30px_rgba(16,42,67,0.18)] transition hover:-translate-y-0.5"
+          className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-lg bg-navy px-4 text-[0.95rem] font-semibold leading-6 text-white shadow-[0_14px_30px_rgba(16,42,67,0.18)] transition hover:-translate-y-0.5"
         >
           <Phone className="h-4 w-4" aria-hidden />
           Gọi ngay

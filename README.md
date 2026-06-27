@@ -39,6 +39,47 @@ Sửa các giá trị:
 
 Với Google Maps iframe, dán link embed vào `googleMapsEmbedSrc`. Nếu chưa có, website sẽ hiển thị khung placeholder.
 
+## Lưu đơn đặt lịch vào Google Sheet
+
+Form đặt lịch hỗ trợ gửi đơn vào Google Sheet qua Google Apps Script.
+
+Tạo file `.env.local` từ `.env.example`, rồi dán link Web App vào:
+
+```text
+NEXT_PUBLIC_BOOKING_WEBHOOK_URL=https://script.google.com/macros/s/xxx/exec
+```
+
+Google Sheet nên có hàng tiêu đề:
+
+```text
+Thời gian | Họ tên | Số điện thoại | Địa chỉ | Dịch vụ | Ghi chú | Nguồn
+```
+
+Trong Google Apps Script, dùng đoạn này:
+
+```js
+function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  const data = JSON.parse(e.postData.contents);
+
+  sheet.appendRow([
+    new Date(),
+    data.name || "",
+    data.phone || "",
+    data.address || "",
+    data.service || "",
+    data.note || "",
+    data.source || "DN House website"
+  ]);
+
+  return ContentService
+    .createTextOutput(JSON.stringify({ ok: true }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+```
+
+Deploy Apps Script dạng Web App, chọn quyền truy cập "Anyone". Khi chưa có `NEXT_PUBLIC_BOOKING_WEBHOOK_URL`, form sẽ mở Zalo như cách cũ.
+
 ## Thay bảng giá
 
 Trong `config/siteConfig.ts`, sửa mảng `pricing`:

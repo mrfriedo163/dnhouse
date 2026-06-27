@@ -15,7 +15,7 @@ export function BeforeAfter() {
                   <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-lg bg-white text-navy shadow-sm">
                     <ImagePlus className="h-7 w-7" aria-hidden />
                   </span>
-                  <p className="mt-3 font-black text-navy">Thêm ảnh thật tại đây</p>
+                  <p className="mt-3 font-extrabold text-navy">Thêm ảnh thật tại đây</p>
                 </div>
               </div>
               <p className="p-4 font-bold text-slate-700">{item}</p>

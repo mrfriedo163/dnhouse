@@ -7,7 +7,7 @@ type CTAButtonsProps = {
 
 export function CTAButtons({ compact = false }: CTAButtonsProps) {
   const base =
-    "inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 font-black leading-6 transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sky-200";
+    "inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-5 font-extrabold leading-6 transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sky-200";
   const size = compact ? "text-[0.92rem]" : "text-base";
 
   return (

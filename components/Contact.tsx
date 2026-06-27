@@ -18,7 +18,7 @@ export function Contact() {
                   <Icon className="mt-1 h-5 w-5 shrink-0 text-navy" aria-hidden />
                   <p>
                     <span className="block text-sm font-bold text-slate-500">{item.label}</span>
-                    <span className="font-black text-navy">{item.value}</span>
+                    <span className="font-extrabold text-navy">{item.value}</span>
                   </p>
                 </div>
               );
@@ -43,12 +43,12 @@ export function Contact() {
               <span className="icon-tile h-14 w-14">
                 <MapPin className="h-7 w-7" aria-hidden />
               </span>
-              <p className="mt-4 text-xl font-black text-navy">Google Maps</p>
+              <p className="mt-4 text-xl font-extrabold text-navy">Google Maps</p>
               <p className="mt-2 max-w-sm leading-7 text-slate-700">
                 Bấm nút bên dưới để mở vị trí DN House trên Google Maps.
               </p>
               <a
-                className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-navy px-5 font-black text-white shadow-[0_18px_38px_rgba(16,42,67,0.22)] transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sky-200"
+                className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-navy px-5 font-extrabold text-white shadow-[0_18px_38px_rgba(16,42,67,0.22)] transition duration-200 hover:-translate-y-0.5 focus:outline-none focus:ring-4 focus:ring-sky-200"
                 href={siteConfig.mapsHref}
                 target="_blank"
                 rel="noreferrer"

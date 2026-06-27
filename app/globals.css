@@ -16,7 +16,7 @@ body {
   background:
     linear-gradient(180deg, #ffffff 0%, #f8fafc 42%, #eef7ff 100%);
   color: #102a43;
-  font-family: "Segoe UI", Tahoma, Arial, "Helvetica Neue", sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -63,11 +63,11 @@ section {
   }
 
   .eyebrow {
-    @apply text-[0.8125rem] font-black uppercase tracking-[0.08em] text-orange-700;
+    @apply text-[0.8125rem] font-extrabold uppercase tracking-[0.08em] text-orange-700;
   }
 
   .section-title {
-    @apply mt-2 text-2xl font-black leading-[1.22] text-navy sm:text-3xl lg:text-4xl;
+    @apply mt-2 text-2xl font-extrabold leading-[1.22] text-navy sm:text-3xl lg:text-4xl;
   }
 
   .section-copy {
@@ -91,8 +91,8 @@ section {
   }
 
   .hero-title {
-    @apply max-w-3xl text-3xl font-black text-navy sm:text-4xl lg:text-5xl;
-    line-height: 1.18;
+    @apply max-w-2xl text-[2.05rem] font-extrabold text-navy sm:text-[2.55rem] lg:text-[3rem];
+    line-height: 1.16;
   }
 
   .animate-rise {

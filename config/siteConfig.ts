@@ -28,6 +28,7 @@ export const siteConfig = {
   logoPath: "/dn-house-logo.jpg",
   heroImage: "/hero-laundry.png",
   googleMapsEmbedSrc: "https://maps.google.com/maps?cid=5580973796756959356&output=embed",
+  bookingWebhookUrl: process.env.NEXT_PUBLIC_BOOKING_WEBHOOK_URL || "",
   nav: [
     { label: "Dịch vụ", href: "#dich-vu" },
     { label: "Bảng giá", href: "#bang-gia" },
@@ -35,9 +36,10 @@ export const siteConfig = {
     { label: "Liên hệ", href: "#lien-he" }
   ],
   hero: {
-    title: "Giặt sấy DN House - sạch thơm, nhanh gọn tại Cần Thơ",
+    title: "Giặt sấy DN House",
+    subtitle: "Sạch thơm, nhanh gọn tại Cần Thơ",
     description:
-      "Bạn không có thời gian giặt đồ? Mùa mưa đồ ẩm, lâu khô, dễ có mùi? DN House hỗ trợ giặt sấy quần áo, chăn ga, giặt giày và ủi đồ để bạn luôn có đồ sạch thơm mỗi ngày."
+      "Bạn không có thời gian giặt đồ? Mùa mưa đồ ẩm, lâu khô, dễ có mùi? DN House hỗ trợ giặt sấy quần áo, chăn ga, giặt giày, rèm cửa và tẩy điểm để bạn luôn có đồ sạch thơm mỗi ngày."
   },
   quickBenefits: [
     { label: "Sạch thơm, gấp gọn", icon: Sparkles },
@@ -64,17 +66,49 @@ export const siteConfig = {
       icon: Footprints
     },
     {
-      title: "Ủi đồ / gấp đồ",
+      title: "Tẩy điểm / giặt rèm",
       description:
-        "Dành cho người bận rộn, cần đồ phẳng đẹp, gọn gàng.",
+        "Hỗ trợ tẩy điểm, giặt rèm cửa và các món cần kiểm tra trước khi báo giá.",
       icon: Wand2
     }
   ],
   pricing: [
-    { service: "Giặt sấy quần áo", price: "từ ...đ/kg", icon: Shirt },
-    { service: "Giặt chăn/mền", price: "từ ...đ/cái", icon: BedDouble },
-    { service: "Giặt giày", price: "từ ...đ/đôi", icon: Footprints },
-    { service: "Ủi đồ", price: "từ ...đ/món", icon: Sparkles }
+    {
+      service: "Giặt sấy từ 3kg",
+      price: "9K/kg",
+      note: "Phù hợp đồ hằng ngày, tính theo kg",
+      icon: Shirt
+    },
+    {
+      service: "Gói dưới 3kg",
+      price: "35K/lần",
+      note: "Ít đồ vẫn nhận, giá gọn dễ tính",
+      icon: Droplets
+    },
+    {
+      service: "Giặt chăn/drap",
+      price: "từ 15K/kg",
+      note: "Chăn, drap, đồ dày từ 15K - 20K/kg",
+      icon: BedDouble
+    },
+    {
+      service: "Vệ sinh giày",
+      price: "50K/đôi",
+      note: "Làm sạch, khử mùi giày đi học/đi làm",
+      icon: Footprints
+    }
+  ],
+  priceDetails: [
+    { service: "Giặt sấy thường dưới 3kg", price: "35K/lần giặt" },
+    { service: "Giặt sấy từ 3kg trở lên", price: "9K/kg" },
+    { service: "Khăn spa", price: "12K/kg" },
+    { service: "Chăn, drap", price: "15K - 20K/kg" },
+    { service: "Chăn bông", price: "25K/kg" },
+    { service: "Rèm cửa", price: "25K/kg" },
+    { service: "Tẩy điểm", price: "15K - 50K" },
+    { service: "Tẩy full đồ", price: "Báo giá trực tiếp" },
+    { service: "Vệ sinh giày", price: "50K/đôi" },
+    { service: "Giặt tay", price: "Phụ thu 10K - 15K/cái" }
   ],
   steps: [
     "Gọi/Zalo cho DN House",
@@ -126,7 +160,7 @@ export const siteConfig = {
     "Giặt sấy quần áo",
     "Giặt chăn ga",
     "Giặt giày",
-    "Ủi đồ",
+    "Tẩy điểm / giặt rèm",
     "Khác"
   ],
   contactHighlights: [

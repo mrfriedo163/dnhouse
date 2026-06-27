@@ -17,7 +17,7 @@ export function Services() {
                 <span className="icon-tile mb-5">
                   <Icon className="h-6 w-6" aria-hidden />
                 </span>
-                <h3 className="text-xl font-black text-navy">{service.title}</h3>
+                <h3 className="text-xl font-extrabold text-navy">{service.title}</h3>
                 <p className="mt-3 leading-7 text-slate-700">{service.description}</p>
               </article>
             );

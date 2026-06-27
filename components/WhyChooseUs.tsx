@@ -14,7 +14,7 @@ export function WhyChooseUs() {
                 <span className="icon-tile bg-orange-50 text-orange-700">
                   <Icon className="h-6 w-6" aria-hidden />
                 </span>
-                <p className="mt-4 text-lg font-black leading-7 text-navy">{item.title}</p>
+                <p className="mt-4 text-lg font-extrabold leading-7 text-navy">{item.title}</p>
               </div>
             );
           })}

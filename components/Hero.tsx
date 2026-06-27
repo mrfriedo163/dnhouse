@@ -7,32 +7,19 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-[linear-gradient(135deg,#ffffff_0%,#f5fbff_48%,#eaf6ff_100%)]">
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(16,42,67,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(16,42,67,0.04)_1px,transparent_1px)] bg-[size:36px_36px]" />
-      <div className="section-shell relative grid gap-8 pb-12 pt-8 md:grid-cols-[1.02fr_0.98fr] md:items-center md:pb-16 md:pt-14">
+      <div className="section-shell relative grid gap-10 pb-12 pt-10 md:grid-cols-[0.95fr_1.05fr] md:items-center md:pb-16 md:pt-16">
         <div>
-          <div className="animate-rise mb-5 flex items-center gap-3">
-            <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-slate-100 bg-white shadow-soft">
-              <Image
-                src={siteConfig.logoPath}
-                alt="Logo Giặt sấy DN House"
-                fill
-                sizes="64px"
-                className="object-contain p-1"
-                priority
-              />
-            </span>
-            <span>
-              <span className="block text-sm font-black uppercase leading-5 text-navy">DN House</span>
-              <span className="block text-sm font-bold leading-5 text-slate-600">Laundry And More...</span>
-            </span>
-          </div>
-          <div className="animate-rise mb-5 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-white px-4 py-2 text-[0.92rem] font-bold leading-6 text-orange-700 shadow-sm">
+          <div className="animate-rise mb-5 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-white px-4 py-2 text-[0.92rem] font-extrabold leading-6 text-orange-700 shadow-sm">
             <BadgePercent className="h-4 w-4" aria-hidden />
             {siteConfig.promotion}
           </div>
           <h1 className="hero-title animate-rise animate-delay-1">
-            {siteConfig.hero.title}
+            <span className="block">{siteConfig.hero.title}</span>
+            <span className="mt-2 block text-[0.78em] leading-[1.2] text-slate-700">
+              {siteConfig.hero.subtitle}
+            </span>
           </h1>
-          <p className="animate-rise animate-delay-2 mt-5 max-w-2xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
+          <p className="animate-rise animate-delay-2 mt-5 max-w-xl text-base leading-7 text-slate-700 sm:text-[1.05rem] sm:leading-8">
             {siteConfig.hero.description}
           </p>
           <div className="animate-rise animate-delay-3 mt-7">
@@ -41,18 +28,18 @@ export function Hero() {
           <div className="animate-rise animate-delay-3 mt-6 grid gap-3 text-[0.95rem] font-semibold leading-6 text-slate-700 sm:grid-cols-2">
             <span className="inline-flex items-center gap-2 rounded-lg border border-slate-100 bg-white px-4 py-3 shadow-sm">
               <CheckCircle2 className="h-5 w-5 text-emerald-600" aria-hidden />
-              Không đăng nhập
+              Không cần tài khoản
             </span>
             <span className="inline-flex items-center gap-2 rounded-lg border border-slate-100 bg-white px-4 py-3 shadow-sm">
               <CheckCircle2 className="h-5 w-5 text-emerald-600" aria-hidden />
-              Đặt lịch nhanh qua Zalo
+              Có lưu đơn đặt lịch
             </span>
           </div>
         </div>
 
-        <div className="surface-card soft-float relative overflow-hidden p-2">
-          <div className="absolute inset-x-5 top-5 z-10 flex items-center justify-between rounded-lg bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
-            <span className="inline-flex items-center gap-2 font-black text-navy">
+        <div className="surface-card soft-float relative overflow-hidden p-2 md:p-3">
+          <div className="absolute inset-x-5 top-5 z-10 flex items-center justify-between gap-3 rounded-lg bg-white/95 px-4 py-3 shadow-[0_14px_34px_rgba(16,42,67,0.12)] backdrop-blur">
+            <span className="inline-flex min-w-0 items-center gap-2 font-extrabold text-navy">
               <span className="relative h-7 w-7 overflow-hidden rounded-md border border-slate-100 bg-white">
                 <Image
                   src={siteConfig.logoPath}
@@ -64,7 +51,7 @@ export function Hero() {
               </span>
               DN House
             </span>
-            <span className="text-[0.92rem] font-bold text-orange-700">Sạch thơm mỗi ngày</span>
+            <span className="shrink-0 text-[0.9rem] font-bold text-orange-700">Từ 9K/kg</span>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
             <Image
@@ -76,17 +63,17 @@ export function Hero() {
               className="image-breathe object-cover"
             />
           </div>
-          <div className="absolute bottom-5 left-5 right-5 grid grid-cols-3 gap-2 rounded-lg bg-navy/90 p-3 text-center text-white backdrop-blur">
-            <div>
-              <p className="text-base font-black sm:text-lg">30%</p>
+          <div className="absolute bottom-5 left-5 right-5 grid grid-cols-3 divide-x divide-white/15 overflow-hidden rounded-lg bg-navy text-center text-white shadow-[0_18px_45px_rgba(16,42,67,0.32)]">
+            <div className="px-2 py-3">
+              <p className="text-base font-extrabold sm:text-lg">30%</p>
               <p className="text-[0.75rem] leading-4 text-sky-100">ưu đãi</p>
             </div>
-            <div>
-              <p className="text-base font-black sm:text-lg">4</p>
-              <p className="text-[0.75rem] leading-4 text-sky-100">dịch vụ</p>
+            <div className="px-2 py-3">
+              <p className="text-base font-extrabold sm:text-lg">9K/kg</p>
+              <p className="text-[0.75rem] leading-4 text-sky-100">giặt sấy</p>
             </div>
-            <div>
-              <p className="text-base font-black sm:text-lg">Zalo</p>
+            <div className="px-2 py-3">
+              <p className="text-base font-extrabold sm:text-lg">Zalo</p>
               <p className="text-[0.75rem] leading-4 text-sky-100">đặt nhanh</p>
             </div>
           </div>
