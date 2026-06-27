@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 42%, #eef7ff 100%);
+  color: #102a43;
+  font-family: "Segoe UI", Tahoma, Arial, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+::selection {
+  background: #e6f4ff;
+  color: #102a43;
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-6xl px-4;
+  }
+
+  .eyebrow {
+    @apply text-[0.8125rem] font-black uppercase tracking-[0.08em] text-orange-700;
+  }
+
+  .section-title {
+    @apply mt-2 text-2xl font-black leading-[1.22] text-navy sm:text-3xl lg:text-4xl;
+  }
+
+  .section-copy {
+    @apply mt-4 max-w-2xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8;
+  }
+
+  .surface-card {
+    @apply rounded-lg border border-white/80 bg-white shadow-soft;
+  }
+
+  .lift-card {
+    @apply transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(16,42,67,0.12)];
+  }
+
+  .icon-tile {
+    @apply flex h-12 w-12 items-center justify-center rounded-lg bg-skySoft text-navy;
+  }
+
+  .input-field {
+    @apply mt-2 min-h-12 w-full rounded-lg border border-slate-200 bg-white px-4 text-[1rem] leading-6 text-navy outline-none transition focus:border-navy focus:ring-4 focus:ring-sky-100;
+  }
+
+  .hero-title {
+    @apply max-w-3xl text-3xl font-black text-navy sm:text-4xl lg:text-5xl;
+    line-height: 1.18;
+  }
+}
