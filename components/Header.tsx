@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/siteConfig";
 
@@ -6,8 +7,15 @@ export function Header() {
     <header className="animate-fade sticky top-0 z-40 border-b border-white/70 bg-white/85 shadow-[0_8px_30px_rgba(16,42,67,0.06)] backdrop-blur-xl">
       <div className="section-shell flex items-center justify-between gap-4 py-3">
         <a href="#" className="flex min-w-0 items-center gap-3" aria-label="DN House">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-navy text-sm font-black text-white shadow-soft">
-            DN
+          <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-slate-100 bg-white shadow-soft">
+            <Image
+              src={siteConfig.logoPath}
+              alt="Logo Giặt sấy DN House"
+              fill
+              sizes="48px"
+              className="object-contain p-1"
+              priority
+            />
           </span>
           <span className="min-w-0">
             <span className="block text-base font-black leading-tight sm:text-lg">{siteConfig.businessName}</span>

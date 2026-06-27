@@ -9,6 +9,22 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(16,42,67,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(16,42,67,0.04)_1px,transparent_1px)] bg-[size:36px_36px]" />
       <div className="section-shell relative grid gap-8 pb-12 pt-8 md:grid-cols-[1.02fr_0.98fr] md:items-center md:pb-16 md:pt-14">
         <div>
+          <div className="animate-rise mb-5 flex items-center gap-3">
+            <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg border border-slate-100 bg-white shadow-soft">
+              <Image
+                src={siteConfig.logoPath}
+                alt="Logo Giặt sấy DN House"
+                fill
+                sizes="64px"
+                className="object-contain p-1"
+                priority
+              />
+            </span>
+            <span>
+              <span className="block text-sm font-black uppercase leading-5 text-navy">DN House</span>
+              <span className="block text-sm font-bold leading-5 text-slate-600">Laundry And More...</span>
+            </span>
+          </div>
           <div className="animate-rise mb-5 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-white px-4 py-2 text-[0.92rem] font-bold leading-6 text-orange-700 shadow-sm">
             <BadgePercent className="h-4 w-4" aria-hidden />
             {siteConfig.promotion}
@@ -36,7 +52,18 @@ export function Hero() {
 
         <div className="surface-card soft-float relative overflow-hidden p-2">
           <div className="absolute inset-x-5 top-5 z-10 flex items-center justify-between rounded-lg bg-white/90 px-4 py-3 shadow-sm backdrop-blur">
-            <span className="font-black text-navy">DN House</span>
+            <span className="inline-flex items-center gap-2 font-black text-navy">
+              <span className="relative h-7 w-7 overflow-hidden rounded-md border border-slate-100 bg-white">
+                <Image
+                  src={siteConfig.logoPath}
+                  alt=""
+                  fill
+                  sizes="28px"
+                  className="object-contain p-0.5"
+                />
+              </span>
+              DN House
+            </span>
             <span className="text-[0.92rem] font-bold text-orange-700">Sạch thơm mỗi ngày</span>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg">

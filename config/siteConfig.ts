@@ -25,9 +25,9 @@ export const siteConfig = {
   hours: "07:00 - 21:00 hằng ngày",
   area: "Long Tuyền, Bình Thủy và khu vực lân cận tại Cần Thơ",
   promotion: "Giảm 30% nhân dịp khai trương",
-  logoPath: "/logo.png",
+  logoPath: "/dn-house-logo.jpg",
   heroImage: "/hero-laundry.png",
-  googleMapsEmbedSrc: "",
+  googleMapsEmbedSrc: "https://maps.google.com/maps?cid=5580973796756959356&output=embed",
   nav: [
     { label: "Dịch vụ", href: "#dich-vu" },
     { label: "Bảng giá", href: "#bang-gia" },
