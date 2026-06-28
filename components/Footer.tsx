@@ -26,7 +26,7 @@ export function Footer() {
         </div>
       </div>
       <div className="bg-[#facc15] px-4 py-2 text-center text-sm font-bold leading-6 text-navy">
-        Copyright © 2026 DN House Laundry And More. All rights reserved.
+        Copyright © 2026 Hộ Kinh Doanh Giặt Sấy DN House. All rights reserved.
       </div>
     </footer>
   );
