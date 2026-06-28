@@ -73,7 +73,7 @@ export const siteConfig = {
   ],
   pricing: [
     {
-      service: "Giặt sấy từ 3kg",
+      service: "Giặt từ 3kg",
       price: "từ 7K/kg",
       note: "Mức giá ưu đãi áp dụng theo chương trình và số lượng đồ",
       icon: Shirt
