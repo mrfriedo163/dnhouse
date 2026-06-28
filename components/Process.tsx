@@ -8,7 +8,7 @@ export function Process() {
           <p className="eyebrow">Quy trình tại DN House</p>
           <h2 className="section-title">Liên hệ nhanh, báo giá trước, làm rõ ràng</h2>
           <p className="section-copy">
-            Khách không cần điền form trên website. DN House tư vấn trực tiếp qua Zalo hoặc hotline để thống nhất dịch vụ trước khi nhận đồ.
+            Chỉ cần nhắn Zalo hoặc gọi hotline, DN House sẽ tư vấn dịch vụ phù hợp, báo giá trước và hẹn thời gian nhận đồ.
           </p>
         </div>
         <div className="stagger-list mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">

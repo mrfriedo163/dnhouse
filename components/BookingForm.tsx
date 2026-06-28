@@ -12,8 +12,7 @@ export function BookingForm() {
             Cần giặt sấy? Nhắn Zalo hoặc gọi DN House
           </h2>
           <p className="mt-4 text-lg leading-8 text-sky-100">
-            Website không có form gửi thông tin khách hàng. Khách liên hệ trực tiếp qua Zalo hoặc hotline để tiệm tư vấn,
-            báo giá và xác nhận thời gian phục vụ.
+            Nhắn Zalo hoặc gọi ngay cho DN House để được tư vấn nhanh, báo giá rõ ràng và hẹn thời gian phục vụ phù hợp.
           </p>
           <div className="mt-6 rounded-lg border border-white/15 bg-white/10 p-4 text-sky-50">
             Khi nhắn Zalo, bạn có thể gửi loại đồ cần giặt, số lượng ước tính và khu vực để DN House phản hồi nhanh hơn.
