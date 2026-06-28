@@ -23,9 +23,13 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-1 rounded-lg border border-slate-200 bg-white/80 p-1 text-[0.92rem] font-semibold leading-5 text-slate-700 md:flex">
+        <nav className="hidden min-w-[430px] items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/90 p-1.5 text-[0.98rem] font-bold leading-5 text-slate-700 shadow-[0_14px_34px_rgba(16,42,67,0.08)] md:flex lg:min-w-[500px]">
           {siteConfig.nav.map((item) => (
-            <a key={item.href} href={item.href} className="rounded-md px-3 py-2 hover:bg-skySoft hover:text-navy">
+            <a
+              key={item.href}
+              href={item.href}
+              className="flex min-h-11 flex-1 items-center justify-center rounded-lg px-4 py-2.5 transition hover:bg-skySoft hover:text-navy"
+            >
               {item.label}
             </a>
           ))}
