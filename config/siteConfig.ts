@@ -9,7 +9,7 @@ import {
   Phone,
   Shirt,
   Sparkles,
-  Umbrella,
+  Truck,
   Wand2
 } from "lucide-react";
 
@@ -42,9 +42,9 @@ export const siteConfig = {
   },
   quickBenefits: [
     { label: "Sạch thơm, gấp gọn", icon: Sparkles },
-    { label: "Hỗ trợ mùa mưa", icon: Umbrella },
+    { label: "Tẩy vết bẩn", icon: Wand2 },
     { label: "Có vệ sinh giày", icon: Footprints },
-    { label: "Gần Long Tuyền - Bình Thủy", icon: MapPin }
+    { label: "Freeship trong bán kính 3km", icon: Truck }
   ],
   services: [
     {
