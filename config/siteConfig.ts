@@ -99,7 +99,8 @@ export const siteConfig = {
   ],
   priceDetails: [
     { service: "Giặt sấy thường dưới 3kg", price: "35K/lần giặt" },
-    { service: "Giặt sấy từ 3kg trở lên", price: "từ 7K/kg" },
+    { service: "Giặt sấy từ 3kg trở lên", price: "9K/kg" },
+    { service: "Giặt phơi tự nhiên từ 3kg trở lên", price: "7K/kg" },
     { service: "Khăn spa", price: "12K/kg" },
     { service: "Chăn, drap", price: "15K - 20K/kg" },
     { service: "Chăn bông", price: "25K/kg" },
