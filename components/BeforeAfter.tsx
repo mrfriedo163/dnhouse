@@ -4,15 +4,15 @@ import { siteConfig } from "@/config/siteConfig";
 const beforeAfterImages = [
   {
     src: "/before-after-shoes.jpg",
-    alt: "Giay trang sau khi duoc ve sinh tai DN House"
+    alt: "Giay sau khi duoc ve sinh tai DN House"
   },
   {
     src: "/before-after-bedding.jpg",
-    alt: "Chan men sach thom sau khi giat say tai DN House"
+    alt: "Chan men sau khi giat say tai DN House"
   },
   {
     src: "/before-after-clothes.jpg",
-    alt: "Quan ao duoc giat say va gap gon tai DN House"
+    alt: "Quan ao sau khi duoc gap gon tai DN House"
   }
 ];
 
@@ -20,8 +20,8 @@ export function BeforeAfter() {
   return (
     <section className="bg-white py-14 md:py-20">
       <div className="section-shell">
-        <p className="eyebrow">Hình ảnh thực tế</p>
-        <h2 className="section-title">Trước và sau khi giặt</h2>
+        <p className="eyebrow">Hình ảnh thực tế sau khi giặt</p>
+        <h2 className="section-title">Đồ sạch thơm, gọn gàng hơn sau khi xử lý</h2>
         <div className="stagger-list mt-8 grid gap-4 md:grid-cols-3">
           {siteConfig.beforeAfter.map((item, index) => (
             <div key={item} className="group surface-card lift-card overflow-hidden">

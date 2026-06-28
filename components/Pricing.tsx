@@ -44,13 +44,15 @@ export function Pricing() {
           <div className="surface-card border-orange-100 bg-orange-50 p-5">
             <p className="text-sm font-extrabold uppercase tracking-wide text-orange-700">Lưu ý</p>
             <p className="mt-3 leading-7 text-slate-700">
-              Giá có thể thay đổi theo chất liệu, kích thước và tình trạng đồ. Với đồ cần tẩy, đồ dày hoặc số lượng nhiều, DN House sẽ kiểm tra và báo giá trước khi làm.
+              Giá có thể thay đổi theo chất liệu, kích thước, tình trạng đồ và chương trình ưu đãi. Với đồ cần tẩy, đồ dày hoặc số lượng nhiều, DN House sẽ kiểm tra và báo giá trước khi làm.
             </p>
             <a
-              href="#dat-lich"
+              href={siteConfig.zaloHref}
+              target="_blank"
+              rel="noreferrer"
               className="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-navy px-4 font-extrabold text-white shadow-soft transition hover:-translate-y-0.5"
             >
-              Đặt lịch tư vấn giá
+              Liên hệ tư vấn giá
             </a>
           </div>
         </div>

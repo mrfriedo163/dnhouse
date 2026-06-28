@@ -9,8 +9,8 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(16,42,67,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(16,42,67,0.04)_1px,transparent_1px)] bg-[size:36px_36px]" />
       <div className="section-shell relative grid gap-10 pb-12 pt-10 md:grid-cols-[0.95fr_1.05fr] md:items-center md:pb-16 md:pt-16">
         <div>
-          <div className="animate-rise mb-5 inline-flex items-center gap-2 rounded-full border border-orange-100 bg-white px-4 py-2 text-[0.92rem] font-extrabold leading-6 text-orange-700 shadow-sm">
-            <BadgePercent className="h-4 w-4" aria-hidden />
+          <div className="animate-rise mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-orange-200 bg-white px-5 py-3 text-[1rem] font-black leading-6 text-orange-700 shadow-[0_14px_34px_rgba(234,88,12,0.16)] sm:text-[1.08rem]">
+            <BadgePercent className="h-5 w-5 shrink-0" aria-hidden />
             {siteConfig.promotion}
           </div>
           <h1 className="hero-title animate-rise animate-delay-1">
@@ -28,11 +28,11 @@ export function Hero() {
           <div className="animate-rise animate-delay-3 mt-6 grid gap-3 text-[0.95rem] font-semibold leading-6 text-slate-700 sm:grid-cols-2">
             <span className="inline-flex items-center gap-2 rounded-lg border border-slate-100 bg-white px-4 py-3 shadow-sm">
               <CheckCircle2 className="h-5 w-5 text-emerald-600" aria-hidden />
-              Không cần tài khoản
+              Không nhập thông tin trên web
             </span>
             <span className="inline-flex items-center gap-2 rounded-lg border border-slate-100 bg-white px-4 py-3 shadow-sm">
               <CheckCircle2 className="h-5 w-5 text-emerald-600" aria-hidden />
-              Có lưu đơn đặt lịch
+              Tư vấn trực tiếp qua Zalo
             </span>
           </div>
         </div>
@@ -51,7 +51,7 @@ export function Hero() {
               </span>
               DN House
             </span>
-            <span className="shrink-0 text-[0.9rem] font-bold text-orange-700">Từ 9K/kg</span>
+            <span className="shrink-0 text-[0.95rem] font-black text-orange-700">Từ 7K/kg</span>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
             <Image
@@ -63,18 +63,20 @@ export function Hero() {
               className="image-breathe object-cover"
             />
           </div>
-          <div className="absolute bottom-5 left-5 right-5 grid grid-cols-3 divide-x divide-white/15 overflow-hidden rounded-lg bg-navy text-center text-white shadow-[0_18px_45px_rgba(16,42,67,0.32)]">
-            <div className="px-2 py-3">
-              <p className="text-base font-extrabold sm:text-lg">30%</p>
-              <p className="text-[0.75rem] leading-4 text-sky-100">ưu đãi</p>
-            </div>
-            <div className="px-2 py-3">
-              <p className="text-base font-extrabold sm:text-lg">9K/kg</p>
-              <p className="text-[0.75rem] leading-4 text-sky-100">giặt sấy</p>
-            </div>
-            <div className="px-2 py-3">
-              <p className="text-base font-extrabold sm:text-lg">Zalo</p>
-              <p className="text-[0.75rem] leading-4 text-sky-100">đặt nhanh</p>
+          <div className="absolute bottom-5 left-5 right-5 overflow-hidden rounded-lg bg-white/92 text-navy shadow-[0_18px_45px_rgba(16,42,67,0.26)] backdrop-blur">
+            <div className="grid grid-cols-3 divide-x divide-slate-200 text-center">
+              <div className="px-2 py-3">
+                <p className="text-lg font-black text-orange-700 sm:text-xl">10-30%</p>
+                <p className="text-[0.75rem] font-bold leading-4 text-slate-600">ưu đãi</p>
+              </div>
+              <div className="px-2 py-3">
+                <p className="text-lg font-black text-navy sm:text-xl">7K/kg</p>
+                <p className="text-[0.75rem] font-bold leading-4 text-slate-600">chỉ từ</p>
+              </div>
+              <div className="px-2 py-3">
+                <p className="text-lg font-black text-navy sm:text-xl">Zalo</p>
+                <p className="text-[0.75rem] font-bold leading-4 text-slate-600">liên hệ ngay</p>
+              </div>
             </div>
           </div>
         </div>

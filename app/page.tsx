@@ -25,7 +25,7 @@ const jsonLd = {
     addressCountry: "VN"
   },
   areaServed: "Cần Thơ",
-  serviceType: ["Laundry service", "shoe cleaning", "ironing"]
+  serviceType: ["Laundry service", "shoe cleaning", "curtain cleaning", "bedding cleaning"]
 };
 
 export default function Home() {

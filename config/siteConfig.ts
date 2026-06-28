@@ -24,27 +24,26 @@ export const siteConfig = {
     "648/24 Khu vực Bình Trung, Phường Long Tuyền, Quận Bình Thủy, TP. Cần Thơ",
   hours: "07:00 - 21:00 hằng ngày",
   area: "Long Tuyền, Bình Thủy và khu vực lân cận tại Cần Thơ",
-  promotion: "Giảm 30% nhân dịp khai trương",
+  promotion: "Ưu đãi 10-30% - liên hệ tiệm ngay",
   logoPath: "/dn-house-logo.jpg",
   heroImage: "/hero-laundry.png",
   googleMapsEmbedSrc: "https://maps.google.com/maps?cid=5580973796756959356&output=embed",
-  bookingWebhookUrl: process.env.NEXT_PUBLIC_BOOKING_WEBHOOK_URL || "",
   nav: [
     { label: "Dịch vụ", href: "#dich-vu" },
     { label: "Bảng giá", href: "#bang-gia" },
-    { label: "Đặt lịch", href: "#dat-lich" },
+    { label: "Quy trình", href: "#quy-trinh" },
     { label: "Liên hệ", href: "#lien-he" }
   ],
   hero: {
     title: "Giặt sấy DN House",
     subtitle: "Sạch thơm, nhanh gọn tại Cần Thơ",
     description:
-      "Bạn không có thời gian giặt đồ? Mùa mưa đồ ẩm, lâu khô, dễ có mùi? DN House hỗ trợ giặt sấy quần áo, chăn ga, giặt giày, rèm cửa và tẩy điểm để bạn luôn có đồ sạch thơm mỗi ngày."
+      "Bạn không có thời gian giặt đồ? Mùa mưa đồ ẩm, lâu khô, dễ có mùi? DN House hỗ trợ giặt sấy quần áo, chăn ga, vệ sinh giày, rèm cửa và tẩy điểm để bạn luôn có đồ sạch thơm mỗi ngày."
   },
   quickBenefits: [
     { label: "Sạch thơm, gấp gọn", icon: Sparkles },
     { label: "Hỗ trợ mùa mưa", icon: Umbrella },
-    { label: "Có giặt giày", icon: Footprints },
+    { label: "Có vệ sinh giày", icon: Footprints },
     { label: "Gần Long Tuyền - Bình Thủy", icon: MapPin }
   ],
   services: [
@@ -75,8 +74,8 @@ export const siteConfig = {
   pricing: [
     {
       service: "Giặt sấy từ 3kg",
-      price: "9K/kg",
-      note: "Phù hợp đồ hằng ngày, tính theo kg",
+      price: "từ 7K/kg",
+      note: "Mức giá ưu đãi áp dụng theo chương trình và số lượng đồ",
       icon: Shirt
     },
     {
@@ -100,7 +99,7 @@ export const siteConfig = {
   ],
   priceDetails: [
     { service: "Giặt sấy thường dưới 3kg", price: "35K/lần giặt" },
-    { service: "Giặt sấy từ 3kg trở lên", price: "9K/kg" },
+    { service: "Giặt sấy từ 3kg trở lên", price: "từ 7K/kg" },
     { service: "Khăn spa", price: "12K/kg" },
     { service: "Chăn, drap", price: "15K - 20K/kg" },
     { service: "Chăn bông", price: "25K/kg" },
@@ -111,21 +110,34 @@ export const siteConfig = {
     { service: "Giặt tay", price: "Phụ thu 10K - 15K/cái" }
   ],
   steps: [
-    "Gọi/Zalo cho DN House",
-    "Gửi thông tin đồ cần giặt",
-    "Nhận đồ sạch thơm, gấp gọn"
+    {
+      title: "Liên hệ trước qua Zalo hoặc hotline",
+      description: "Khách gửi loại đồ cần giặt, số lượng ước tính và khu vực để tiệm tư vấn nhanh."
+    },
+    {
+      title: "DN House kiểm tra và báo giá",
+      description: "Tiệm xác nhận dịch vụ phù hợp, thời gian dự kiến và chi phí trước khi nhận đồ."
+    },
+    {
+      title: "Tiệm tiến hành giặt sấy",
+      description: "Đồ được phân loại, xử lý theo từng nhóm như quần áo, chăn mền, giày, rèm hoặc đồ cần tẩy điểm."
+    },
+    {
+      title: "Nhận đồ sạch thơm, gấp gọn",
+      description: "Khách nhận lại đồ đã hoàn tất; nếu cần hỗ trợ thêm có thể phản hồi trực tiếp qua Zalo."
+    }
   ],
   beforeAfter: [
-    "Giày trước/sau khi vệ sinh",
-    "Chăn/mền sau khi giặt sấy",
-    "Quần áo được gấp gọn"
+    "Giày sau khi vệ sinh",
+    "Chăn mền sau khi giặt sấy",
+    "Quần áo sau khi được gấp gọn"
   ],
   whyChooseUs: [
     { title: "Gần khu dân cư Cần Thơ", icon: MapPin },
     { title: "Phù hợp mùa mưa, đồ lâu khô", icon: Droplets },
     { title: "Giá rõ ràng, báo trước khi làm", icon: BadgePercent },
     {
-      title: "Giặt sấy, giặt giày, chăn ga trong một nơi",
+      title: "Giặt sấy, vệ sinh giày, chăn ga trong một nơi",
       icon: CheckCircle2
     }
   ],
@@ -136,7 +148,7 @@ export const siteConfig = {
         "Có. Tiệm nhận giặt chăn, mền, drap và các loại đồ dày. Giá sẽ được báo trước theo kích thước và chất liệu."
     },
     {
-      question: "Có giặt giày không?",
+      question: "Có vệ sinh giày không?",
       answer:
         "Có. DN House hỗ trợ vệ sinh giày, khử mùi và chăm sóc giày đi học, đi làm."
     },
@@ -148,20 +160,13 @@ export const siteConfig = {
     {
       question: "Giá có thay đổi không?",
       answer:
-        "Giá có thể thay đổi theo chất liệu, kích thước và tình trạng đồ. DN House sẽ báo giá trước khi làm."
+        "Giá có thể thay đổi theo chất liệu, kích thước, tình trạng đồ và chương trình ưu đãi. DN House sẽ báo giá trước khi làm."
     },
     {
       question: "Có hỗ trợ khu vực Long Tuyền/Bình Thủy không?",
       answer:
         "Có. DN House phục vụ Long Tuyền, Bình Thủy và khu vực lân cận tại Cần Thơ."
     }
-  ],
-  bookingServices: [
-    "Giặt sấy quần áo",
-    "Giặt chăn ga",
-    "Giặt giày",
-    "Tẩy điểm / giặt rèm",
-    "Khác"
   ],
   contactHighlights: [
     { label: "Hotline/Zalo", value: "0945 632 853", icon: Phone },
