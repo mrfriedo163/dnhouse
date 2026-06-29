@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 
 export const siteConfig = {
+  siteUrl: "https://www.giatsaycantho.vn",
   businessName: "DN House",
   slogan: "Giặt sấy sạch thơm - nhanh gọn tại Cần Thơ",
   hotline: "0945 632 853",
@@ -36,7 +37,7 @@ export const siteConfig = {
   ],
   hero: {
     title: "Giặt sấy DN House",
-    subtitle: "Sạch thơm, nhanh gọn tại Cần Thơ",
+    subtitle: "Giặt sấy Cần Thơ - sạch thơm, nhanh gọn",
     description:
       "Bạn không có thời gian giặt đồ? Mùa mưa đồ ẩm, lâu khô, dễ có mùi? DN House hỗ trợ giặt sấy quần áo, chăn ga, vệ sinh giày, rèm cửa và tẩy điểm để bạn luôn có đồ sạch thơm mỗi ngày."
   },
