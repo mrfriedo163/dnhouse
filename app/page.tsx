@@ -6,6 +6,7 @@ import { FloatingCTA } from "@/components/FloatingCTA";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { PopularSearchLinks } from "@/components/PopularSearchLinks";
 import { Pricing } from "@/components/Pricing";
 import { Process } from "@/components/Process";
 import { QuickInfo } from "@/components/QuickInfo";
@@ -101,6 +102,9 @@ export default function Home() {
         </div>
         <div className="scroll-reveal">
           <Services />
+        </div>
+        <div className="scroll-reveal">
+          <PopularSearchLinks />
         </div>
         <div className="scroll-reveal">
           <Pricing />
