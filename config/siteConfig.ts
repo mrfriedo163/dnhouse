@@ -30,10 +30,10 @@ export const siteConfig = {
   heroImage: "/hero-laundry.png",
   googleMapsEmbedSrc: "https://maps.google.com/maps?cid=5580973796756959356&output=embed",
   nav: [
-    { label: "Dịch vụ", href: "#dich-vu" },
-    { label: "Bảng giá", href: "#bang-gia" },
-    { label: "Quy trình", href: "#quy-trinh" },
-    { label: "Liên hệ", href: "#lien-he" }
+    { label: "Dịch vụ", href: "/#dich-vu" },
+    { label: "Bảng giá", href: "/#bang-gia" },
+    { label: "Quy trình", href: "/#quy-trinh" },
+    { label: "Liên hệ", href: "/#lien-he" }
   ],
   hero: {
     title: "Giặt sấy DN House",

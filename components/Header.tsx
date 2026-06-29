@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="animate-fade sticky top-0 z-40 border-b border-white/70 bg-white/85 shadow-[0_8px_30px_rgba(16,42,67,0.06)] backdrop-blur-xl">
       <div className="section-shell flex items-center justify-between gap-4 py-3">
-        <a href="#" className="flex min-w-0 items-center gap-3" aria-label="DN House">
+        <a href="/" className="flex min-w-0 items-center gap-3" aria-label="DN House">
           <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-slate-100 bg-white shadow-soft">
             <Image
               src={siteConfig.logoPath}
