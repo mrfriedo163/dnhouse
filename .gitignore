@@ -1,6 +1,9 @@
 # dependencies
 node_modules
 
+# Separate POS repository
+dnhouse-pos/
+
 # next.js
 .next
 out
