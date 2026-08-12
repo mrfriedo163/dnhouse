@@ -33,6 +33,7 @@ export const siteConfig = {
     { label: "Dịch vụ", href: "/#dich-vu" },
     { label: "Bảng giá", href: "/#bang-gia" },
     { label: "Quy trình", href: "/#quy-trinh" },
+    { label: "Hỏi đáp", href: "/hoi-dap-giat-say-can-tho" },
     { label: "Liên hệ", href: "/#lien-he" }
   ],
   hero: {

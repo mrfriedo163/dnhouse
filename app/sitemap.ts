@@ -10,6 +10,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1
     },
+    {
+      url: `${siteConfig.siteUrl}/hoi-dap-giat-say-can-tho`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8
+    },
     ...seoPages.map((page) => ({
       url: `${siteConfig.siteUrl}/${page.slug}`,
       lastModified: new Date(),
