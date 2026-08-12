@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight, AlertTriangle, CheckCircle2, MessageCircle } from "lucide-react";
+import { ArrowRight, AlertTriangle, CheckCircle2, MessageCircle, ShieldAlert } from "lucide-react";
 import { CTAButtons } from "@/components/CTAButtons";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { getGuideAdvice, getGuideServiceFacts, getRelatedGuides } from "@/config/guideAdvice";
 import { getGuide, guideCategories, guides } from "@/config/guides";
 import { getSeoPage } from "@/config/seoPages";
 import { siteConfig } from "@/config/siteConfig";
@@ -29,20 +30,20 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-function relatedGuides(slug: string, category: string) {
-  return guides.filter((guide) => guide.category === category && guide.slug !== slug).slice(0, 3);
-}
-
 export default function GuidePage({ params }: PageProps) {
   const guide = getGuide(params.slug);
   if (!guide) notFound();
+  const advice = getGuideAdvice(guide.slug);
+  if (!advice) notFound();
   const service = getSeoPage(guide.serviceSlug)!;
+  const serviceFacts = getGuideServiceFacts(guide);
   const url = `${siteConfig.siteUrl}/thu-vien/${guide.slug}`;
-  const related = relatedGuides(guide.slug, guide.category);
+  const related = getRelatedGuides(guide, guides);
   const faq = [
-    { question: `${guide.title}: nên làm gì trước?`, answer: guide.firstAction },
-    { question: "Có nên tự xử lý ngay tại nhà không?", answer: "Chỉ nên làm các bước nhẹ, an toàn và phù hợp nhãn vải/chất liệu. Hãy thử ở vùng kín trước; nếu không chắc về vật liệu hoặc vết bẩn, đừng dùng chất tẩy mạnh." },
-    { question: "Khi nào nên liên hệ DN House?", answer: "Khi món đồ dày, dễ hỏng, vết bẩn đã lâu, có mùi/mốc rõ hoặc bạn cần báo giá và thời gian thực tế. Gửi ảnh qua Zalo để tiệm xem tình trạng trước." }
+    { question: "Việc đầu tiên nên làm là gì?", answer: guide.firstAction },
+    { question: "Điều nào cần tránh?", answer: advice.avoid },
+    { question: "Khi nào nên dừng tự xử lý?", answer: advice.stopWhen },
+    { question: `DN House hỗ trợ gì cho trường hợp này?`, answer: `${serviceFacts.title}: ${serviceFacts.facts.join("; ")}.` }
   ];
   const jsonLd = {
     "@context": "https://schema.org",
@@ -75,16 +76,27 @@ export default function GuidePage({ params }: PageProps) {
           <div className="section-shell grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <article>
               <p className="eyebrow">Câu trả lời nhanh</p>
-              <h2 className="section-title">Cách xử lý an toàn trước khi mang đi giặt</h2>
+              <h2 className="section-title">Bạn nên làm gì trong trường hợp này?</h2>
               <p className="mt-5 text-lg leading-8 text-slate-700">{guide.summary}</p>
-              <div className="mt-8 grid gap-4 md:grid-cols-2">
-                <section className="surface-card p-6"><h3 className="flex items-center gap-2 text-xl font-extrabold text-navy"><CheckCircle2 className="h-5 w-5 text-orange-700" />Việc nên làm ngay</h3><ol className="mt-4 list-decimal space-y-3 pl-5 leading-7 text-slate-700"><li>{guide.firstAction}</li><li>Đọc nhãn chăm sóc và thử thao tác ở một vùng khuất trước.</li><li>Giặt theo nhãn và chỉ làm khô hoàn toàn khi vết/mùi đã được xử lý.</li></ol></section>
-                <section className="surface-card border-orange-100 p-6"><h3 className="flex items-center gap-2 text-xl font-extrabold text-navy"><AlertTriangle className="h-5 w-5 text-orange-700" />Điều nên tránh</h3><ul className="mt-4 list-disc space-y-3 pl-5 leading-7 text-slate-700"><li>Không chà xát quá mạnh hoặc dùng nhiệt cao khi chưa xử lý xong vết bẩn.</li><li>Không trộn các chất tẩy rửa với nhau.</li><li>Không tiếp tục tự xử lý nếu vải đổi màu, bong keo hoặc vết lan rộng.</li></ul></section>
+              {guide.risk === "high" && (
+                <section className="mt-7 flex gap-4 rounded-2xl border border-amber-300 bg-amber-50 p-5 text-amber-950">
+                  <ShieldAlert className="mt-1 h-6 w-6 shrink-0" aria-hidden />
+                  <div><h3 className="font-extrabold">Trường hợp cần thận trọng</h3><p className="mt-1 leading-7">Bài này thuộc nhóm rủi ro cao. Hãy dừng ngay nếu chất liệu đổi màu, biến dạng, bong keo hoặc có hóa chất/dung môi không rõ thành phần.</p></div>
+                </section>
+              )}
+              <section className="surface-card mt-8 p-6 md:p-8">
+                <h2 className="flex items-center gap-2 text-2xl font-extrabold text-navy"><CheckCircle2 className="h-6 w-6 text-orange-700" />Ba bước xử lý phù hợp</h2>
+                <ol className="mt-5 space-y-5">
+                  {advice.steps.map((step, index) => <li key={step} className="grid grid-cols-[2rem_1fr] gap-3 leading-7 text-slate-700"><span className="flex h-8 w-8 items-center justify-center rounded-full bg-navy font-extrabold text-white">{index + 1}</span><span>{step}</span></li>)}
+                </ol>
+              </section>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
+                <section className="surface-card border-orange-100 p-6"><h2 className="flex items-center gap-2 text-xl font-extrabold text-navy"><AlertTriangle className="h-5 w-5 text-orange-700" />Điều cần tránh</h2><p className="mt-4 leading-7 text-slate-700">{advice.avoid}</p></section>
+                <section className="surface-card border-sky-200 bg-skySoft p-6"><h2 className="text-xl font-extrabold text-navy">Khi nào nên dừng?</h2><p className="mt-4 leading-7 text-slate-700">{advice.stopWhen}</p></section>
               </div>
-              <section className="mt-8 rounded-2xl bg-skySoft p-6 md:p-8"><p className="text-sm font-extrabold uppercase tracking-wide text-orange-700">Khi nào nên dừng tự xử lý?</p><h2 className="mt-2 text-2xl font-extrabold text-navy">Hãy kiểm tra thực tế nếu món đồ có rủi ro</h2><p className="mt-3 leading-7 text-slate-700">Với đồ có nhãn chăm sóc đặc biệt, vải mỏng, da/da lộn, chi tiết dán keo, vết lâu ngày hoặc vết bẩn không rõ nguồn gốc, cách an toàn là gửi ảnh để được kiểm tra trước. DN House không cam kết xử lý sạch tuyệt đối khi chưa xem tình trạng thực tế.</p></section>
             </article>
             <aside className="space-y-5">
-              <section className="surface-card p-6"><p className="eyebrow">Dịch vụ liên quan</p><h2 className="mt-2 text-2xl font-extrabold text-navy">{service.title}</h2><p className="mt-3 leading-7 text-slate-700">{service.description}</p><Link href={`/${service.slug}`} className="mt-5 inline-flex items-center gap-2 font-extrabold text-navy underline underline-offset-4">Xem trang dịch vụ <ArrowRight className="h-4 w-4" /></Link></section>
+              <section className="surface-card p-6"><p className="eyebrow">Thông tin dịch vụ thật</p><h2 className="mt-2 text-2xl font-extrabold text-navy">{serviceFacts.title}</h2><ul className="mt-4 space-y-3">{serviceFacts.facts.map((fact) => <li key={fact} className="flex gap-2 leading-7 text-slate-700"><CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-orange-700" />{fact}</li>)}</ul><Link href={`/${service.slug}`} className="mt-5 inline-flex items-center gap-2 font-extrabold text-navy underline underline-offset-4">Xem trang dịch vụ và giá <ArrowRight className="h-4 w-4" /></Link></section>
               <section className="rounded-2xl bg-navy p-6 text-white"><MessageCircle className="h-7 w-7 text-orange-200" /><h2 className="mt-4 text-xl font-extrabold">Gửi ảnh để hỏi tình trạng đồ</h2><p className="mt-2 leading-7 text-sky-100">Khách ở {siteConfig.area} có thể nhắn Zalo để tiệm xem chất liệu, vết bẩn và báo khả năng xử lý trước.</p><a href={siteConfig.zaloHref} className="mt-5 inline-flex rounded-lg bg-white px-4 py-3 font-extrabold text-navy">Nhắn Zalo {siteConfig.hotline}</a></section>
             </aside>
           </div>
