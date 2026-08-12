@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "content:gateway:test": "node scripts/test-gateway.mjs",
+    "content:research": "node scripts/run-research-wave.mjs",
+    "content:write": "node scripts/run-writer-wave.mjs",
+    "content:audit": "node scripts/audit-wave.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

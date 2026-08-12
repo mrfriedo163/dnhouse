@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/siteConfig";
 export type SeoPage = {
   slug: string;
   title: string;
+  serviceType: string;
   metaTitle: string;
   description: string;
   eyebrow: string;
@@ -24,6 +25,7 @@ export const seoPages: SeoPage[] = [
   {
     slug: "giat-say-can-tho",
     title: "Giặt sấy Cần Thơ",
+    serviceType: "Giặt sấy quần áo",
     metaTitle: "Giặt sấy Cần Thơ - DN House | Sạch thơm, báo giá rõ ràng",
     description:
       "DN House nhận giặt sấy Cần Thơ cho quần áo hằng ngày, chăn mền, rèm cửa và đồ cần tẩy vết bẩn. Liên hệ Zalo/hotline để được báo giá trước.",
@@ -62,12 +64,18 @@ export const seoPages: SeoPage[] = [
       {
         question: "Giặt sấy từ 3kg giá bao nhiêu?",
         answer: "Giặt sấy từ 3kg trở lên là 9K/kg. Giặt phơi tự nhiên từ 3kg trở lên là 7K/kg."
+      },
+      {
+        question: "DN House có freeship không?",
+        answer:
+          "DN House hỗ trợ freeship trong bán kính 3km. Với khu vực xa hơn hoặc đơn đồ đặc biệt, khách nên nhắn Zalo để tiệm xác nhận trước."
       }
     ]
   },
   {
     slug: "ve-sinh-giay-can-tho",
     title: "Vệ sinh giày Cần Thơ",
+    serviceType: "Vệ sinh giày",
     metaTitle: "Vệ sinh giày Cần Thơ - DN House | Làm sạch, khử mùi giày",
     description:
       "DN House nhận vệ sinh giày Cần Thơ, hỗ trợ làm sạch và khử mùi giày đi học, đi làm. Giá tham khảo 50K/đôi, liên hệ Zalo để tư vấn.",
@@ -106,12 +114,18 @@ export const seoPages: SeoPage[] = [
       {
         question: "DN House có nhận khách ở Bình Thủy không?",
         answer: "Có. Tiệm phục vụ Long Tuyền, Bình Thủy và khu vực lân cận tại Cần Thơ."
+      },
+      {
+        question: "Bao lâu thì nhận lại giày?",
+        answer:
+          "Thời gian xử lý phụ thuộc tình trạng bẩn, chất liệu và số lượng giày. DN House sẽ xác nhận thời gian dự kiến sau khi xem hình giày hoặc nhận kiểm tra thực tế."
       }
     ]
   },
   {
     slug: "giat-chan-men-can-tho",
     title: "Giặt chăn mền Cần Thơ",
+    serviceType: "Giặt chăn mền, chăn ga và rèm cửa",
     metaTitle: "Giặt chăn mền Cần Thơ - DN House | Chăn ga, drap, rèm cửa",
     description:
       "DN House nhận giặt chăn mền Cần Thơ, chăn ga, drap, rèm cửa và đồ dày lâu khô. Giá chăn/drap từ 15K-20K/kg, báo giá trước khi làm.",
@@ -150,6 +164,11 @@ export const seoPages: SeoPage[] = [
       {
         question: "Có nhận giặt rèm cửa không?",
         answer: "Có. Rèm cửa có giá tham khảo 25K/kg, tùy chất liệu và tình trạng thực tế."
+      },
+      {
+        question: "Đồ dày hoặc đồ có mùi ẩm có cần báo trước không?",
+        answer:
+          "Nên. Bạn có thể gửi loại đồ, kích thước hoặc hình ảnh qua Zalo để DN House kiểm tra, tư vấn cách xử lý và báo giá trước khi làm."
       }
     ]
   }

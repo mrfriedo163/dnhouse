@@ -10,19 +10,36 @@ type SeoLandingPageProps = {
 };
 
 export function SeoLandingPage({ page }: SeoLandingPageProps) {
-  const jsonLd = {
+  const serviceJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    name: page.title,
-    description: page.description,
-    areaServed: "Cần Thơ",
-    provider: {
-      "@type": "DryCleaningOrLaundry",
-      name: "Hộ Kinh Doanh Giặt Sấy DN House",
-      telephone: "+84945632853",
-      url: siteConfig.siteUrl,
-      address: siteConfig.address
-    }
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": `${siteConfig.siteUrl}/${page.slug}#service`,
+        name: page.title,
+        serviceType: page.serviceType,
+        description: page.description,
+        url: `${siteConfig.siteUrl}/${page.slug}`,
+        provider: { "@id": `${siteConfig.siteUrl}/#business` },
+        areaServed: [
+          { "@type": "City", name: "Cần Thơ" },
+          { "@type": "Place", name: "Long Tuyền" },
+          { "@type": "Place", name: "Bình Thủy" }
+        ],
+        availableChannel: {
+          "@type": "ServiceChannel",
+          servicePhone: "+84945632853",
+          serviceUrl: siteConfig.zaloHref
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Trang chủ", item: siteConfig.siteUrl },
+          { "@type": "ListItem", position: 2, name: page.title, item: `${siteConfig.siteUrl}/${page.slug}` }
+        ]
+      }
+    ]
   };
 
   const faqJsonLd = {
@@ -40,7 +57,7 @@ export function SeoLandingPage({ page }: SeoLandingPageProps) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <main>
         <section className="relative overflow-hidden bg-[linear-gradient(135deg,#ffffff_0%,#f5fbff_48%,#eaf6ff_100%)] py-12 md:py-16">
@@ -94,6 +111,23 @@ export function SeoLandingPage({ page }: SeoLandingPageProps) {
                   <p className="mt-3 leading-7 text-slate-700">{section.body}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-sky-100 bg-sky-50 py-10">
+          <div className="section-shell grid gap-4 md:grid-cols-3">
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-wide text-orange-700">Khu vực phục vụ</p>
+              <p className="mt-2 font-extrabold text-navy">{siteConfig.area}</p>
+            </div>
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-wide text-orange-700">Địa chỉ tiệm</p>
+              <p className="mt-2 font-extrabold text-navy">{siteConfig.address}</p>
+            </div>
+            <div>
+              <p className="text-sm font-extrabold uppercase tracking-wide text-orange-700">Tư vấn & báo giá</p>
+              <p className="mt-2 font-extrabold text-navy">Hotline/Zalo {siteConfig.hotline} · {siteConfig.hours}</p>
             </div>
           </div>
         </section>

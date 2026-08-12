@@ -15,16 +15,6 @@ export const metadata: Metadata = {
     template: "%s | DN House"
   },
   description: seoDescription,
-  keywords: [
-    "giặt sấy cần thơ",
-    "giặt đồ cần thơ",
-    "tiệm giặt sấy cần thơ",
-    "giặt sấy bình thủy",
-    "giặt sấy long tuyền",
-    "vệ sinh giày cần thơ",
-    "giặt chăn ga cần thơ",
-    "DN House"
-  ],
   alternates: {
     canonical: "/"
   },

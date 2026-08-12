@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "waveId": "dn-house-pilot-001",
+  "createdAt": "2026-08-12T00:00:00.000Z",
+  "items": [
+    {
+      "slug": "cach-tay-vet-mau-tren-ao-trang",
+      "title": "Cách tẩy vết máu trên áo trắng an toàn",
+      "primaryEntity": "vết máu trên áo trắng",
+      "searchIntent": "Hướng dẫn xử lý vết máu mới và khô trên áo trắng, nêu rõ giới hạn an toàn và khi nào cần dịch vụ chuyên nghiệp",
+      "contentType": "stain-treatment",
+      "category": "tay-vet-ban",
+      "stainType": "máu",
+      "garmentType": "áo",
+      "colorClass": "trắng",
+      "material": null,
+      "stainAge": ["mới", "khô lâu ngày"],
+      "treatmentRisk": "high",
+      "parentHub": "/thu-vien/tay-vet-ban/vet-mau",
+      "localServiceFit": true,
+      "localProofRequired": true,
+      "plannedSources": [
+        "nguồn y tế hoặc khoa học giải thích vết máu/protein và nhiệt độ",
+        "nguồn an toàn hóa chất có thẩm quyền",
+        "hướng dẫn chăm sóc vải từ nhà sản xuất hoặc tổ chức chuyên môn"
+      ],
+      "knowledgeScope": [
+        "xử lý ngay vết máu mới trên áo trắng",
+        "xử lý vết máu khô lâu ngày",
+        "rủi ro của nước nóng và hóa chất",
+        "khác biệt theo chất liệu và giới hạn tự xử lý"
+      ],
+      "status": {
+        "research": "pending",
+        "writing": "pending",
+        "qa": "pending",
+        "image": "pending",
+        "humanReview": "pending"
+      }
+    }
+  ]
+}
+

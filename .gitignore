@@ -29,3 +29,8 @@ Thumbs.db
 # editor
 .vscode
 .idea
+
+# Internal image-selection working files (published images live in public/seo-images/)
+content-development/image-workflow/contact-sheets/
+content-development/image-workflow/final-contact-sheets/
+content-development/image-workflow/selected-originals/
