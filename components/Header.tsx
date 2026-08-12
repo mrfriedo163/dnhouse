@@ -23,7 +23,7 @@ export function Header() {
           </span>
         </a>
 
-        <nav className="hidden min-w-[430px] items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/90 p-1.5 text-[0.98rem] font-bold leading-5 text-slate-700 shadow-[0_14px_34px_rgba(16,42,67,0.08)] md:flex lg:min-w-[500px]">
+        <nav className="hidden min-w-[500px] items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white/90 p-1.5 text-[0.98rem] font-bold leading-5 text-slate-700 shadow-[0_14px_34px_rgba(16,42,67,0.08)] lg:flex">
           {siteConfig.nav.map((item) => (
             <a
               key={item.href}
@@ -43,6 +43,12 @@ export function Header() {
           Gọi ngay
         </a>
       </div>
+      <nav className="section-shell flex gap-2 overflow-x-auto pb-3 text-sm font-extrabold text-slate-700 lg:hidden" aria-label="Điều hướng nhanh">
+        <a href="/#dich-vu" className="whitespace-nowrap rounded-full bg-skySoft px-4 py-2">Dịch vụ</a>
+        <a href="/#bang-gia" className="whitespace-nowrap rounded-full bg-skySoft px-4 py-2">Bảng giá</a>
+        <a href="/hoi-dap-giat-say-can-tho" className="whitespace-nowrap rounded-full bg-navy px-4 py-2 text-white">Hỏi đáp</a>
+        <a href="/#lien-he" className="whitespace-nowrap rounded-full bg-skySoft px-4 py-2">Địa chỉ</a>
+      </nav>
     </header>
   );
 }

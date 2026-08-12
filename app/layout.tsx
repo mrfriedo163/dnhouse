@@ -77,6 +77,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
               if (href.indexOf('tel:') === 0) eventName = 'click_phone';
               else if (href.indexOf('zalo.me') !== -1) eventName = 'click_zalo';
+              else if (href.indexOf('facebook.com') !== -1 || href.indexOf('tiktok.com') !== -1) {
+                eventName = 'click_social';
+              }
               else if (href.indexOf('maps.app.goo.gl') !== -1 || href.indexOf('google.com/maps') !== -1) {
                 eventName = 'click_directions';
               }

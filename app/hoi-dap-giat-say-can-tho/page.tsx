@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { siteConfig } from "@/config/siteConfig";
 import { seoPages } from "@/config/seoPages";
-import { guideCategories, guides } from "@/config/guides";
+import { GuideLibrary } from "@/components/GuideLibrary";
 
 const pageUrl = `${siteConfig.siteUrl}/hoi-dap-giat-say-can-tho`;
 
@@ -127,18 +127,7 @@ export default function LaundryFaqPage() {
               <h2 className="section-title">50 tình huống giặt sấy, vệ sinh giày và chăm sóc đồ</h2>
               <p className="section-copy">Chọn đúng tình huống để xem câu trả lời nhanh, các bước an toàn và khi nào cần gửi ảnh cho DN House kiểm tra trước.</p>
             </div>
-            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {guides.map((guide) => (
-                <Link key={guide.slug} href={`/thu-vien/${guide.slug}`} className="surface-card lift-card group flex min-h-52 flex-col justify-between p-5">
-                  <span>
-                    <span className="text-sm font-extrabold uppercase tracking-wide text-orange-700">{guideCategories[guide.category]}</span>
-                    <span className="mt-3 block text-xl font-extrabold leading-7 text-navy">{guide.title}</span>
-                    <span className="mt-3 line-clamp-2 block leading-7 text-slate-700">{guide.summary}</span>
-                  </span>
-                  <span className="mt-5 inline-flex items-center gap-2 font-extrabold text-navy transition group-hover:gap-3">Đọc hướng dẫn <ArrowRight className="h-4 w-4" aria-hidden /></span>
-                </Link>
-              ))}
-            </div>
+            <GuideLibrary />
           </div>
         </section>
       </main>

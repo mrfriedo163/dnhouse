@@ -1,6 +1,7 @@
 import { MapPin } from "lucide-react";
 import { CTAButtons } from "@/components/CTAButtons";
 import { siteConfig } from "@/config/siteConfig";
+import { SocialLinks } from "@/components/SocialLinks";
 
 export function Contact() {
   return (
@@ -26,6 +27,10 @@ export function Contact() {
           </div>
           <div className="mt-6">
             <CTAButtons />
+          </div>
+          <div className="mt-7 border-t border-slate-100 pt-6">
+            <p className="mb-3 text-sm font-extrabold uppercase tracking-wide text-slate-500">Xem thêm hình ảnh và hoạt động của tiệm</p>
+            <SocialLinks />
           </div>
         </div>
 

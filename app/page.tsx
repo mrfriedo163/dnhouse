@@ -69,7 +69,7 @@ const localBusinessJsonLd = {
           }
         }))
       },
-      sameAs: [siteConfig.mapsHref]
+      sameAs: [siteConfig.mapsHref, siteConfig.facebookHref, siteConfig.tiktokHref]
     },
     {
       "@type": "WebSite",

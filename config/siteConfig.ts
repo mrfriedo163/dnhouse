@@ -20,6 +20,8 @@ export const siteConfig = {
   hotline: "0945 632 853",
   phoneHref: "tel:0945632853",
   zaloHref: "https://zalo.me/0945632853",
+  facebookHref: "https://www.facebook.com/share/18cqM4EQWx/?mibextid=wwXIfr",
+  tiktokHref: "https://www.tiktok.com/@giatsaydnhouse?_r=1&_t=ZS-98oXYFGwe8o",
   mapsHref: "https://maps.app.goo.gl/f1u58iDt2dWALKnX8",
   address:
     "648/24 Khu vực Bình Trung, Phường Long Tuyền, Quận Bình Thủy, TP. Cần Thơ",
@@ -35,6 +37,18 @@ export const siteConfig = {
     { label: "Quy trình", href: "/#quy-trinh" },
     { label: "Hỏi đáp", href: "/hoi-dap-giat-say-can-tho" },
     { label: "Liên hệ", href: "/#lien-he" }
+  ],
+  socialLinks: [
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/share/18cqM4EQWx/?mibextid=wwXIfr",
+      description: "Xem thông tin và liên hệ DN House trên Facebook"
+    },
+    {
+      label: "TikTok",
+      href: "https://www.tiktok.com/@giatsaydnhouse?_r=1&_t=ZS-98oXYFGwe8o",
+      description: "Xem video thực tế tại tiệm trên TikTok"
+    }
   ],
   hero: {
     title: "Giặt sấy DN House",
