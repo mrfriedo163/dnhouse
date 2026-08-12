@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { seoPages } from "@/config/seoPages";
+import { guides } from "@/config/guides";
 import { siteConfig } from "@/config/siteConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -21,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.85
+    })),
+    ...guides.map((guide) => ({
+      url: `${siteConfig.siteUrl}/thu-vien/${guide.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7
     }))
   ];
 }

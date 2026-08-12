@@ -7,11 +7,12 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { siteConfig } from "@/config/siteConfig";
 import { seoPages } from "@/config/seoPages";
+import { guideCategories, guides } from "@/config/guides";
 
 const pageUrl = `${siteConfig.siteUrl}/hoi-dap-giat-say-can-tho`;
 
 export const metadata: Metadata = {
-  title: "Hỏi đáp giặt sấy tại Cần Thơ | DN House",
+  title: "Hỏi đáp giặt sấy tại Cần Thơ",
   description:
     "Giải đáp các câu hỏi thường gặp về giặt sấy quần áo, chăn mền, rèm cửa, vệ sinh giày và giao nhận tại Cần Thơ.",
   alternates: { canonical: pageUrl },
@@ -64,7 +65,7 @@ export default function LaundryFaqPage() {
           <div className="section-shell max-w-4xl text-center">
             <p className="eyebrow">Cẩm nang DN House</p>
             <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-navy md:text-5xl">Hỏi đáp giặt sấy tại Cần Thơ</h1>
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-700">Nơi DN House tổng hợp câu hỏi thường gặp, tình huống thực tế và hướng dẫn chăm sóc đồ. Các bài chuyên sâu sắp tới sẽ được xếp theo từng nhóm chủ đề tại đây.</p>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-700">Nơi DN House tổng hợp câu hỏi thường gặp, tình huống thực tế và hướng dẫn chăm sóc đồ theo từng nhóm chủ đề.</p>
             <div className="mt-8 flex justify-center"><CTAButtons /></div>
           </div>
         </section>
@@ -83,8 +84,8 @@ export default function LaundryFaqPage() {
               </div>
             </div>
             <aside className="surface-card h-fit p-6 md:p-8">
-              <p className="eyebrow">Thư viện đang xây dựng</p>
-              <h2 className="mt-2 text-2xl font-extrabold text-navy">Các nhóm bài sắp bổ sung</h2>
+              <p className="eyebrow">Các nhóm bài</p>
+              <h2 className="mt-2 text-2xl font-extrabold text-navy">Tìm theo loại tình huống</h2>
               <ul className="mt-6 space-y-4 text-slate-700">
                 {topicGroups.map((topic) => (
                   <li key={topic} className="flex gap-3 leading-7"><ArrowRight className="mt-1 h-4 w-4 shrink-0 text-orange-700" aria-hidden /><span>{topic}</span></li>
@@ -114,6 +115,27 @@ export default function LaundryFaqPage() {
                     <span className="mt-3 line-clamp-3 block leading-7 text-slate-700">{page.description}</span>
                   </span>
                   <span className="mt-5 inline-flex items-center gap-2 font-extrabold text-navy transition group-hover:gap-3">Xem trang dịch vụ <ArrowRight className="h-5 w-5" aria-hidden /></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section className="bg-white py-14 md:py-20">
+          <div className="section-shell">
+            <div className="max-w-3xl">
+              <p className="eyebrow">Thư viện cẩm nang</p>
+              <h2 className="section-title">50 tình huống giặt sấy, vệ sinh giày và chăm sóc đồ</h2>
+              <p className="section-copy">Chọn đúng tình huống để xem câu trả lời nhanh, các bước an toàn và khi nào cần gửi ảnh cho DN House kiểm tra trước.</p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {guides.map((guide) => (
+                <Link key={guide.slug} href={`/thu-vien/${guide.slug}`} className="surface-card lift-card group flex min-h-52 flex-col justify-between p-5">
+                  <span>
+                    <span className="text-sm font-extrabold uppercase tracking-wide text-orange-700">{guideCategories[guide.category]}</span>
+                    <span className="mt-3 block text-xl font-extrabold leading-7 text-navy">{guide.title}</span>
+                    <span className="mt-3 line-clamp-2 block leading-7 text-slate-700">{guide.summary}</span>
+                  </span>
+                  <span className="mt-5 inline-flex items-center gap-2 font-extrabold text-navy transition group-hover:gap-3">Đọc hướng dẫn <ArrowRight className="h-4 w-4" aria-hidden /></span>
                 </Link>
               ))}
             </div>
